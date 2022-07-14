@@ -3,12 +3,9 @@ This is a program to let you play a game of rock-paper-scissors against the comp
 
 ## Setup
 1) Save this repository to your local computer by using GitHub Desktop.
-2) Create an anaconda virtual enviorment:
+2) Create and activate an anaconda virtual enviorment:
 ```sh
 conda create -n rps-env python=3.8
-```
-3) Activate the virtual enviroment
-```sh
 conda activate rps-env
 ```
 
