@@ -1,14 +1,20 @@
-import random #loading random module
+import random
+from re import X #loading random module
 
 print("Rock, Paper, Scissors, Shoot!")
 # USER INPUT
 user_selection = input("Please select 'rock', 'paper' or 'scissors'!") 
 print("You chose:", user_selection)
-#VALIDATE USER INPUT
 
+#VALIDATE USER INPUT
+options = ["rock", "paper", "scissors"]
+user_selection = user_selection.lower()
+
+if user_selection not in options:
+    print ("Not a valid option, please choose 'rock, 'paper' or 'scissors'")
+    exit()
 #COMPUTER CHOICE
 
-options = ["rock", "paper", "scissors"]
 computer_choice = random.choice(options)
 print("Computer chose:", computer_choice)
 
@@ -28,15 +34,9 @@ elif user_selection == "scissors":
         print("Scissors beats Paper. You win!")
     else:
         print("Rock beats scissors. Computer wins!")
-        
+
 elif user_selection == "paper":
     if computer_choice == "rock":
         print("Paper beats Rock. You win!")
     else:
-        print("Scissors beat Paper. Computer wins!")   
-
-
-
-
-
-#RESULT
+        print("Scissors beat Paper. Computer wins!")  
